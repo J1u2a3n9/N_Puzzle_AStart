@@ -9,6 +9,9 @@ class State:
         if self.state:
             self.map=''.join(str(state) for state in self.state)
     
+    
+
+
     def __eq__(self,objective_state):
         return self.map == objective_state.map
     

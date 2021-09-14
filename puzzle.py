@@ -390,7 +390,14 @@ def sub_main(size_aux):
         #a_start(initial_state,objective_state,function[opcionII])
         end=timeit.default_timer()
         show_results(end-start)
-
+#*********************************************************************************************************
+def num_of_parts_out_place(state,stateObj):
+        count=0
+        for i in range(0,len(state[0] )):
+            for j in range(0,len(state[0] )):
+                if(state[i][j]!=stateObj[i][j]):
+                    count+=1
+        return count
 
 
 
@@ -452,9 +459,13 @@ def main():
             print("Enter the number of heuristics to use")
             opcionII='h'+(str(input()))
             start=timeit.default_timer()
+            state=[[1,2,3],[4,5,6],[7,8,9]] 
+            ob=[[1,2,3],[4,5,6],[7,8,9]]
+            print(num_of_parts_out_place(state,ob))
+            
             #a_start(initial_state,objective_state,function[opcionII])
             end=timeit.default_timer()
-            show_results(end-start)
+            #show_results(end-start)
 
 
 
