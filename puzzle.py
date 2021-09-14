@@ -399,7 +399,8 @@ def num_of_parts_out_place(state,stateObj):
                     count+=1
         return count
 
-
+def manhattan_distance(x,y,x1,y1):
+    return abs(x-x1)+abs(y-y1)
 
 def main():
     
