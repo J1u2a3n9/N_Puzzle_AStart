@@ -200,6 +200,57 @@ def id(initial_state, objective_state):
 
 
 
+def a_start(initial_state,objective_state,num_h):
+    global visited_state,objective_node
+    explored=set()
+    priority_queuee=list()
+    secondary_queuee={}
+    heuristic=num_h(initial_state)
+    root_node=State(initial_state,None,None,0,0,heuristic)
+    start=(heuristic,0,root_node)
+    heappush(priority_queuee,start) #inserta en el monticulo
+    secondary_queuee[root_node.map]=start
+    while priority_queuee:
+        node = heappop(priority_queuee) #Extrae y devuelve el element más pequeño del montón
+        explored.add(node[2].map) #agrega a explorados el state actual sin el peso
+        if node[2].state == objective_state:
+            objective_node = node[2]
+            return priority_queuee
+
+        neighbors = expand(node[2])
+
+        for neighbor in neighbors:
+
+            neighbor.heuristic = neighbor.cost + num_h(neighbor.state)
+
+            start = (neighbor.heuristic, neighbor.movement, neighbor) #tupla
+
+            if neighbor.map not in explored:
+
+                heappush(priority_queuee, start) #inserta en el monticulo
+
+                explored.add(neighbor.map) #inserta como explored
+
+                secondary_queuee[neighbor.map] = start #en su id unico creado mediantes sus data pone sus mismos data
+
+                if neighbor.depth > visited_state:
+                    visited_state += 1
+
+            elif neighbor.map in secondary_queuee and neighbor.heuristic < secondary_queuee[neighbor.map][2].heuristic:
+
+                hindex = priority_queuee.index((secondary_queuee[neighbor.map][2].heuristic,
+                                     secondary_queuee[neighbor.map][2].movement,
+                                     secondary_queuee[neighbor.map][2]))
+
+                priority_queuee[int(hindex)] = start
+
+                secondary_queuee[neighbor.map] = start
+
+                heapify(priority_queuee) #transforma la list en monticulo
+
+
+
+
 
 
 
@@ -391,16 +442,43 @@ def sub_main(size_aux):
         end=timeit.default_timer()
         show_results(end-start)
 #*********************************************************************************************************
-def num_of_parts_out_place(state,stateObj):
+def h1(state):
         count=0
         for i in range(0,len(state[0] )):
             for j in range(0,len(state[0] )):
-                if(state[i][j]!=stateObj[i][j]):
+                if(state[i][j]!=objective_state[i][j]):
                     count+=1
         return count
 
-def manhattan_distance(x,y,x1,y1):
+def h2(x,y,x1,y1):
     return abs(x-x1)+abs(y-y1)
+
+def h3(state):
+    counter=0
+    total_amount=0
+    while state!=[]:
+        cont1=counter
+        while cont1 < len(state):
+            if counter==cont1:
+                if cont1+1<len(state) and state[counter]>state[cont1+1]:
+                    total_amount+=1
+                    cont1+=2
+                else:
+                    cont1+=1
+            else:
+                if state[counter]>state[cont1]:
+                    total_amount+=1
+                    cont1+=1
+                else:
+                    cont1+=1
+        if counter == len(state):
+            state=[]
+        else:
+            counter+=1
+    return total_amount
+
+
+
 
 def main():
     
@@ -460,14 +538,15 @@ def main():
             print("Enter the number of heuristics to use")
             opcionII='h'+(str(input()))
             start=timeit.default_timer()
-            state=[[1,2,3],[4,5,6],[7,8,9]] 
-            ob=[[1,2,3],[4,5,6],[7,8,9]]
-            print(num_of_parts_out_place(state,ob))
-            
-            #a_start(initial_state,objective_state,function[opcionII])
+            a_start(initial_state,objective_state,function[opcionII])
             end=timeit.default_timer()
-            #show_results(end-start)
+            show_results(end-start)
 
+
+function = {
+    'h1':h1,
+    'h3':h3
+}
 
 
 if __name__ == '__main__':
