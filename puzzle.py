@@ -21,8 +21,6 @@ visited_state=0
 cost=set()
 
 
-
-
 def reset_values():
     global empty_state,initial_state,objective_state,objective_node,comparative_node,movements,lenght,side,expanded_nodes
     empty_state=[0,0,0,0]
@@ -127,78 +125,6 @@ def state_space(initial_state):
                 queuee.append(neighbor)
                 explored.add(neighbor.map)
     
-
-
-
-def bfs(initial_state, objective_state):
-    global objective_node
-    explored = set()
-    queuee = deque([State(initial_state, None, None,0,0,0)])
-    while queuee:
-        node = queuee.popleft()
-        explored.add(node.map)
-        if node.state == objective_state:
-            objective_node = node
-            return queuee
-        neighbors = expand(node)
-        for neighbor in neighbors:
-            if neighbor.map not in explored:
-                queuee.append(neighbor)
-                explored.add(neighbor.map)
-
-
-def dfs(initial_state, objective_state):
-    global objective_node
-    explored = set()
-    stack = list([State(initial_state, None, None,0,0,0)])
-    while stack:
-        node = stack.pop()
-        explored.add(node.map)
-        if node.state == objective_state:
-            objective_node = node
-            return stack
-        neighbors = reversed(expand(node))
-        for neighbor in neighbors:
-            if neighbor.map not in explored:
-                stack.append(neighbor)
-                explored.add(neighbor.map)
-
-
-def dls_not_recursive(initial_state, objective_state, limit):
-    global objective_node
-    explored = set()
-    stack = list([State(initial_state, None, None,0,0,0)])
-    counter = 0
-    while stack:
-        node = stack.pop()
-        explored.add(node.map)
-        if node.state == objective_state:
-            objective_node = node
-            return stack 
-        if counter < limit:
-            neighbors = reversed(expand(node))
-            for neighbor in neighbors:
-                if neighbor.map not in explored:
-                    stack.append(neighbor)
-                    explored.add(neighbor.map)
-        counter += 1
-        if counter == limit:
-            stack = []
-            return "CUTOFF"
-
-
-def id(initial_state, objective_state):
-    global objective_node
-    i = 1000000000
-    while i < 100000000000:
-        result = dls_not_recursive(initial_state, objective_state, i)
-        if result == 'CUTOFF':
-            i += 1
-        else:
-            i = 100000000000
-    return result
-
-
 
 def a_start(initial_state,objective_state,num_h):
     global visited_state,objective_node
@@ -390,40 +316,12 @@ def sub_main(size_aux):
     # mostrar_puzzle(objective_state)
     generate_random_puzzle(size_aux)
     print("Choose an option")
-    print("1)Solve for BFS")
-    print("2)Solve for DLS")
-    print("3)Solve for dfs")
-    print("4)Solve for Iterative Deepening")
+    
     print("5)Get total number of states")
     print("6)Solve for A*")
     print("Please enter an option: ")
     option = int(input())
-    if option == 1:
-        start = timeit.default_timer()
-        bfs(initial_state, objective_state)
-        end = timeit.default_timer()
-        show_results(end-start)
-    if option == 2:
-        start = timeit.default_timer()
-        respuesta = dls_not_recursive(initial_state, objective_state, 181440)
-        if respuesta == "CUTOFF":
-            print("No solution was found in the limit")
-        else:
-            end = timeit.default_timer()
-            show_results(end-start)
-    if option == 3:
-        start = timeit.default_timer()
-        dfs(initial_state, objective_state)
-        end = timeit.default_timer()
-        show_results(end-start)
-    if option == 4:
-        start = timeit.default_timer()
-        respuesta = id(initial_state, objective_state)
-        if respuesta == "CUTOFF":
-            print("No solution was found in the limit")
-        else:
-            end = timeit.default_timer()
-            show_results(end-start)
+   
     if option==5:
         start = timeit.default_timer()
         state_space(initial_state)
@@ -487,10 +385,7 @@ def main():
         
         print("Welcome to N puzzle")
         print("1)Read for file the state initial and objective")
-        print("2)Solve for BFS")
-        print("3)Solve for DLS")
-        print("4)Solve for dfs")
-        print("5)Solve for Iterative Deepening")
+      
         print("6)Test Random")
         print("7)Solve for A STAR*")
         print("Please enter an option: ")
@@ -499,33 +394,7 @@ def main():
             print("Enter the file name")
             name = input()
             read_of_file(name)
-        if option == 2:
-            start = timeit.default_timer()
-            bfs(initial_state, objective_state)
-            end = timeit.default_timer()
-            show_results(end-start)
-        if option == 3:
-            start = timeit.default_timer()
-            respuesta = dls_not_recursive(
-                initial_state, objective_state, 181440)
-            if respuesta == "CUTOFF":
-                print("No solution was found in the limit")
-            else:
-                end = timeit.default_timer()
-                show_results(end-start)
-        if option == 4:
-            start = timeit.default_timer()
-            dfs(initial_state, objective_state)
-            end = timeit.default_timer()
-            show_results(end-start)
-        if option == 5:
-            start = timeit.default_timer()
-            respuesta = id(initial_state, objective_state)
-            if respuesta == "CUTOFF":
-                print("No solution was found in the limit")
-            else:
-                end = timeit.default_timer()
-                show_results(end-start)
+        
         if option == 6:
             print("Enter the size of puzzle: ")
             size_aux = int(input())
