@@ -53,16 +53,53 @@ A computer program was designed to solve the n puzzle with the a start algorithm
 ## EXPERIMENTS
 1. h1(n) Number of parts out of place with respect to the target condition
 
-    Initial State | Number of states | Time | Steps
-    :---: | :---: | :---: | :---:
-3. h2(n) Sum of the Manhattan distance
+--> Experiments and results: For 8-puzzle
 
     Initial State | Number of states | Time | Steps
     :---: | :---: | :---: | :---:
-
-
-5. h3(n) Sum of inverse permutations
     
+--> Experiments and results: For 15-puzzle
+
+    Initial State | Number of states | Time | Steps
+    :---: | :---: | :---: | :---:
+    
+--> Experiments and results: For 24-puzzle
+
+    Initial State | Number of states | Time | Steps
+    :---: | :---: | :---: | :---:
+
+2. h2(n) Sum of the Manhattan distance
+
+--> Experiments and results: For 8-puzzle
+
+    Initial State | Number of states | Time | Steps
+    :---: | :---: | :---: | :---:
+    
+--> Experiments and results: For 15-puzzle
+
+    Initial State | Number of states | Time | Steps
+    :---: | :---: | :---: | :---:
+    
+--> Experiments and results: For 24-puzzle
+
+    Initial State | Number of states | Time | Steps
+    :---: | :---: | :---: | :---:
+
+
+3. h3(n) Sum of inverse permutations
+    
+--> Experiments and results: For 8-puzzle
+
+    Initial State | Number of states | Time | Steps
+    :---: | :---: | :---: | :---:
+    
+--> Experiments and results: For 15-puzzle
+
+    Initial State | Number of states | Time | Steps
+    :---: | :---: | :---: | :---:
+    
+--> Experiments and results: For 24-puzzle
+
     Initial State | Number of states | Time | Steps
     :---: | :---: | :---: | :---:
 
