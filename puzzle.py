@@ -1,6 +1,6 @@
 import timeit
-# import numpy as np
-from math import factorial
+import numpy as np
+from math import factorial, sqrt
 from collections import deque
 from state import State
 from random import randint
@@ -347,8 +347,22 @@ def h1(state):
                     count+=1
         return count
 
-def h2(x,y,x1,y1):
-    return abs(x-x1)+abs(y-y1)
+
+def h2(state):
+    tam=int(sqrt(len(state)))
+    state_Matriz=np.array(state).reshape(tam,tam)
+    stateObj_Matriz=np.array(objective_state).reshape(tam,tam)
+    sum=0
+    for i in range(0,3):
+        for j in range(0,3):
+            if(state_Matriz[i][j]!=stateObj_Matriz[i][j]):
+                posState=np.where(state_Matriz==state_Matriz[i][j])
+                posObjState=np.where(stateObj_Matriz==state_Matriz[i][j])
+                sum+=abs(int(posState[0])-int(posObjState[0]))+abs(int(posState[1])-int(posObjState[1]))
+    return sum
+
+"""def h2(x,y,x1,y1):
+    return abs(x-x1)+abs(y-y1)"""
 
 def h3(state):
     counter=0
@@ -413,6 +427,7 @@ def main():
 
 function = {
     'h1':h1,
+    'h2':h2,
     'h3':h3
 }
 
