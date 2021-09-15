@@ -20,7 +20,8 @@ IMPORTANT!
 ### Initial State:
       Puzzle with random values in the squares 
       
-![8-Puzzle](https://user-images.githubusercontent.com/74753713/132054522-fc84e30a-10ad-4ab8-b0db-c76c92a4af37.png)
+![NpuzzleStart](https://user-images.githubusercontent.com/74753713/133524075-1d7cff6a-6272-4ac3-8301-6cac0420cc00.png)
+
 
 
 ### Objective State:
