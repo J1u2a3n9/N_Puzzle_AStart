@@ -60,8 +60,9 @@ A computer program was designed to solve the n puzzle with the a start algorithm
     
 --> Experiments and results: For 15-puzzle
 
-    Initial State | Number of states | Time | Steps
-    :---: | :---: | :---: | :---:
+  
+  Initial State | Number of states | Time | Steps
+  :---: | :---: | :---: | :---:
     
 --> Experiments and results: For 24-puzzle
 
