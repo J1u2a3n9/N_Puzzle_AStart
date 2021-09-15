@@ -69,14 +69,15 @@ A computer program was designed to solve the n puzzle with the a start algorithm
 :---: | :---: | :---: | :---:
 [3 1 2 0 4 5 6 7 8 9 10 11 12 13 14 15] | 6419 | 0.15697680 | ['DOWN', 'LEFT', 'UP', 'LEFT', 'LEFT', 'DOWN', 'RIGHT', 'RIGHT', 'UP', 'LEFT', 'DOWN', 'RIGHT', 'RIGHT', 'UP', 'LEFT', 'LEFT', 'DOWN', 'LEFT', 'UP']
 [1 5 2 3 0 6 10 7 4 8 14 11 12 9 13 15] | 10 | 0.00039170 | ['DOWN', 'RIGHT', 'DOWN', 'RIGHT', 'UP', 'UP', 'LEFT', 'UP', 'LEFT']
-[1 2 3 4 5 6 0 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24] | 1220849 | 51.66905610 | ['LEFT', 'DOWN', 'RIGHT', 'RIGHT', 'UP', 'UP', 'RIGHT', 'RIGHT', 'DOWN', 'LEFT', 'UP', 'LEFT', 'DOWN', 'RIGHT', 'RIGHT', 'UP', 'LEFT', 'LEFT', 'LEFT', 'DOWN', 
-'RIGHT', 'DOWN', 'LEFT', 'LEFT', 'UP', 'RIGHT', 'UP', 'LEFT']
+
     
 --> Experiments and results: For 24-puzzle
 
   Initial State | Number of states | Time | Steps 
 :---: | :---: | :---: | :---:
 [1 2 0 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24] | 2 | 0.00012590 | ['LEFT', 'LEFT']
+[1 2 3 4 5 6 0 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24] | 1220849 | 51.66905610 | ['LEFT', 'DOWN', 'RIGHT', 'RIGHT', 'UP', 'UP', 'RIGHT', 'RIGHT', 'DOWN', 'LEFT', 'UP', 'LEFT', 'DOWN', 'RIGHT', 'RIGHT', 'UP', 'LEFT', 'LEFT', 'LEFT', 'DOWN', 
+'RIGHT', 'DOWN', 'LEFT', 'LEFT', 'UP', 'RIGHT', 'UP', 'LEFT']
 
 
 2. h2(n) Sum of the Manhattan distance
