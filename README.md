@@ -55,55 +55,56 @@ A computer program was designed to solve the n puzzle with the a start algorithm
 
 --> Experiments and results: For 8-puzzle
 
-  Initial State | Number of states | Time | Steps
-  :---: | :---: | :---: | :---:
+  Initial State | Number of states | Time | Steps 
+  :---: | :---: | :---: | :---: | :---:
+  [6 8 7 1 0 2 3 4 5] | 3770 | 0.07059230 | ['UP', 'LEFT', 'DOWN', 'DOWN', 'RIGHT', 'UP', 'UP', 'RIGHT', 'DOWN', 'DOWN', 'LEFT', 'UP', 'UP', 'LEFT', 'DOWN', 'DOWN', 'RIGHT', 'UP', 'LEFT', 'UP']
     
 --> Experiments and results: For 15-puzzle
 
   
-  Initial State | Number of states | Time | Steps
-  :---: | :---: | :---: | :---:
+  Initial State | Number of states | Time | Steps 
+  :---: | :---: | :---: | :---: | :---:
     
 --> Experiments and results: For 24-puzzle
 
-  Initial State | Number of states | Time | Steps
-  :---: | :---: | :---: | :---:
-
+  Initial State | Number of states | Time | Steps 
+  :---: | :---: | :---: | :---: | :---:
+  
 2. h2(n) Sum of the Manhattan distance
 
 --> Experiments and results: For 8-puzzle
 
-  Initial State | Number of states | Time | Steps
-  :---: | :---: | :---: | :---:
+  Initial State | Number of states | Time | Steps 
+  :---: | :---: | :---: | :---: | :---:
     
 --> Experiments and results: For 15-puzzle
 
-  Initial State | Number of states | Time | Steps
-  :---: | :---: | :---: | :---:
+  Initial State | Number of states | Time | Steps 
+  :---: | :---: | :---: | :---: | :---:
   
 --> Experiments and results: For 24-puzzle
 
-  Initial State | Number of states | Time | Steps
-  :---: | :---: | :---: | :---:
+  Initial State | Number of states | Time | Steps 
+  :---: | :---: | :---: | :---: | :---:
 
 
 3. h3(n) Sum of inverse permutations
     
 --> Experiments and results: For 8-puzzle
 
-  Initial State | Number of states | Time | Steps
-  :---: | :---: | :---: | :---:
+  Initial State | Number of states | Time | Steps 
+  :---: | :---: | :---: | :---: | :---:
   
 --> Experiments and results: For 15-puzzle
 
-  Initial State | Number of states | Time | Steps
-  :---: | :---: | :---: | :---:
+  Initial State | Number of states | Time | Steps 
+  :---: | :---: | :---: | :---: | :---:
   
     
 --> Experiments and results: For 24-puzzle
 
-  Initial State | Number of states | Time | Steps
-  :---: | :---: | :---: | :---:
+  Initial State | Number of states | Time | Steps 
+  :---: | :---: | :---: | :---: | :---:
   
 
 
