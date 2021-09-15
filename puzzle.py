@@ -336,15 +336,14 @@ def sub_main(size_aux):
         print("Enter the number of heuristics to use")
         opcionII='h'+(str(input()))
         start=timeit.default_timer()
-        #a_start(initial_state,objective_state,function[opcionII])
+        a_start(initial_state,objective_state,function[opcionII])
         end=timeit.default_timer()
         show_results(end-start)
 #*********************************************************************************************************
 def h1(state):
         count=0
-        for i in range(0,len(state[0] )):
-            for j in range(0,len(state[0] )):
-                if(state[i][j]!=objective_state[i][j]):
+        for i in range(0,len(state)):
+               if(state[i]!=objective_state[i]):
                     count+=1
         return count
 
