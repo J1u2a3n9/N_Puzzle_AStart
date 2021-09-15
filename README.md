@@ -53,8 +53,8 @@ A computer program was designed to solve the n puzzle with the a start algorithm
     Initial State | Number of states | Time | Steps
     :---: | :---: | :---: | :---:
 3. h2(n) Sum of the Manhattan distance
-    Initial State | Number of states | Time | Steps
-    :---: | :---: | :---: | :---:
+Initial State | Number of states | Time | Steps
+:---: | :---: | :---: | :---:
 5. h3(n) Sum of inverse permutations
     Initial State | Number of states | Time | Steps
     :---: | :---: | :---: | :---:
