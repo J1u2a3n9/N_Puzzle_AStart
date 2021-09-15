@@ -1,4 +1,5 @@
 import timeit
+import time
 import numpy as np
 from math import factorial, sqrt
 from collections import deque
@@ -124,7 +125,57 @@ def state_space(initial_state):
             if neighbor.map not in explored:
                 queuee.append(neighbor)
                 explored.add(neighbor.map)
-    
+
+
+ #*********************************************************************************************************
+def heuristica1(state):
+        count=0
+        for i in range(0,len(state)):
+               if(state[i]!=objective_state[i]):
+                    count+=1
+        return count
+
+
+def heuristica2(state):
+    tam=int(sqrt(len(state)))
+    state_Matriz=np.array(state).reshape(tam,tam)
+    stateObj_Matriz=np.array(objective_state).reshape(tam,tam)
+    sum=0
+    for i in range(0,3):
+        for j in range(0,3):
+            if(state_Matriz[i][j]!=stateObj_Matriz[i][j]):
+                posState=np.where(state_Matriz==state_Matriz[i][j])
+                posObjState=np.where(stateObj_Matriz==state_Matriz[i][j])
+                sum+=abs(int(posState[0])-int(posObjState[0]))+abs(int(posState[1])-int(posObjState[1]))
+    return sum/2
+
+
+def heuristica3(state):
+    counter=0
+    total_amount=0
+    while state!=[]:
+        cont1=counter
+        while cont1 < len(state):
+            if counter==cont1:
+                if cont1+1<len(state) and state[counter]>state[cont1+1]:
+                    total_amount+=1
+                    cont1+=2
+                else:
+                    cont1+=1
+            else:
+                if state[counter]>state[cont1]:
+                    total_amount+=1
+                    cont1+=1
+                else:
+                    cont1+=1
+        if counter == len(state):
+            state=[]
+        else:
+            counter+=1
+    return total_amount
+
+ #*********************************************************************************************************
+
 
 def a_start(initial_state,objective_state,num_h):
     global visited_state,objective_node
@@ -155,25 +206,14 @@ def a_start(initial_state,objective_state,num_h):
 
                 heappush(priority_queuee, start) #inserta en el monticulo
 
-                explored.add(neighbor.map) #inserta como explored
+                explored.add(neighbor.map) 
 
                 secondary_queuee[neighbor.map] = start #en su id unico creado mediantes sus data pone sus mismos data
 
                 if neighbor.depth > visited_state:
                     visited_state += 1
 
-            elif neighbor.map in secondary_queuee and neighbor.heuristic < secondary_queuee[neighbor.map][2].heuristic:
-
-                hindex = priority_queuee.index((secondary_queuee[neighbor.map][2].heuristic,
-                                     secondary_queuee[neighbor.map][2].movement,
-                                     secondary_queuee[neighbor.map][2]))
-
-                priority_queuee[int(hindex)] = start
-
-                secondary_queuee[neighbor.map] = start
-
-                heapify(priority_queuee) #transforma la list en monticulo
-
+           
 
 
 
@@ -292,102 +332,37 @@ def generate_random_puzzle(size_aux):
     return aux_initial_state
 
 
-# def mostrar_puzzle(puzzle):
-    if lenght == 16:
-        puzzle_nuevo = np.array(puzzle).reshape(4, 4)
-    if lenght == 9:
-        puzzle_nuevo = np.array(puzzle).reshape(3, 3)
-    if lenght == 4:
-        puzzle_nuevo = np.array(puzzle).reshape(2, 2)
-    if lenght == 0:
-        puzzle_nuevo = []
-    print(puzzle_nuevo)
-
-
 def sub_main(size_aux):
     option = 0
     random = generate_random_puzzle(size_aux)
     read_random_state(random)
     print("Puzzle to resolve")
     print(initial_state)
-    # mostrar_puzzle(initial_state)
     print("Target State if a search function is chosen")
     print(objective_state)
-    # mostrar_puzzle(objective_state)
     generate_random_puzzle(size_aux)
     print("Choose an option")
-    
-    print("5)Get total number of states")
-    print("6)Solve for A*")
+    print("1)Get total number of states")
+    print("2)Solve for A*")
     print("Please enter an option: ")
     option = int(input())
-   
-    if option==5:
+    if option==1:
         start = timeit.default_timer()
         state_space(initial_state)
         end = timeit.default_timer()
         print("The number of states is: "+str(expanded_nodes))
         print("time of ejecution: " + format(end-start, '.8f'))
-    if option == 6:
+    if option == 2:
         print("HEURISTICS")
         print("1)Number of pieces out of place")
         print("2)Manhattan")
         print("3)Add inverse permutations")
         print("Enter the number of heuristics to use")
-        opcionII='h'+(str(input()))
+        opcionII='heuristica'+(str(input()))
         start=timeit.default_timer()
         a_start(initial_state,objective_state,function[opcionII])
         end=timeit.default_timer()
         show_results(end-start)
-#*********************************************************************************************************
-def h1(state):
-        count=0
-        for i in range(0,len(state)):
-               if(state[i]!=objective_state[i]):
-                    count+=1
-        return count
-
-
-def h2(state):
-    tam=int(sqrt(len(state)))
-    state_Matriz=np.array(state).reshape(tam,tam)
-    stateObj_Matriz=np.array(objective_state).reshape(tam,tam)
-    sum=0
-    for i in range(0,3):
-        for j in range(0,3):
-            if(state_Matriz[i][j]!=stateObj_Matriz[i][j]):
-                posState=np.where(state_Matriz==state_Matriz[i][j])
-                posObjState=np.where(stateObj_Matriz==state_Matriz[i][j])
-                sum+=abs(int(posState[0])-int(posObjState[0]))+abs(int(posState[1])-int(posObjState[1]))
-    return sum
-
-"""def h2(x,y,x1,y1):
-    return abs(x-x1)+abs(y-y1)"""
-
-def h3(state):
-    counter=0
-    total_amount=0
-    while state!=[]:
-        cont1=counter
-        while cont1 < len(state):
-            if counter==cont1:
-                if cont1+1<len(state) and state[counter]>state[cont1+1]:
-                    total_amount+=1
-                    cont1+=2
-                else:
-                    cont1+=1
-            else:
-                if state[counter]>state[cont1]:
-                    total_amount+=1
-                    cont1+=1
-                else:
-                    cont1+=1
-        if counter == len(state):
-            state=[]
-        else:
-            counter+=1
-    return total_amount
-
 
 
 
@@ -398,37 +373,50 @@ def main():
         
         print("Welcome to N puzzle")
         print("1)Read for file the state initial and objective")
-      
-        print("6)Test Random")
-        print("7)Solve for A STAR*")
+        print("2)Test Random")
+        print("3)Solve for A STAR*")
         print("Please enter an option: ")
         option = int(input())
         if option == 1:
+            print("-------------Do not forget that you must read a text file with two rows, one that has the initial state and the other the objective -------------")
             print("Enter the file name")
             name = input()
             read_of_file(name)
-        
-        if option == 6:
+            print("Welcome to N puzzle")
+            print("3)Solve for A STAR*")
+            print("4)Retroceder")
+            print("Please enter an option: ")
+            option = int(input())
+            if option==4:
+                main()
+        if option == 2:
             print("Enter the size of puzzle: ")
             size_aux = int(input())
             sub_main(size_aux)
-        if option == 7:
+        if option == 3:
             print("HEURISTICS")
-            print("1)Number of pieces out of place")
-            print("2)Manhattan")
-            print("3)Add inverse permutations")
-            print("Enter the number of heuristics to use")
-            opcionII='h'+(str(input()))
-            start=timeit.default_timer()
-            a_start(initial_state,objective_state,function[opcionII])
-            end=timeit.default_timer()
-            show_results(end-start)
+            if (initial_state==[] or objective_state==[]):
+                print("-------------Do not forget to fill your puzzle, since the puzzle restarts in empty every time the a start is executed :C-------------")
+                time.sleep(2)
+                main()
+            else:
+                print("1)Number of pieces out of place")
+                print("2)Manhattan")
+                print("3)Add inverse permutations")
+                print("Enter the number of heuristics to use")
+                opcionII='heuristica'+(str(input()))
+                start=timeit.default_timer()
+                a_start(initial_state,objective_state,function[opcionII])
+                end=timeit.default_timer()
+                show_results(end-start)
+                reset_values()
+               
 
 
 function = {
-    'h1':h1,
-    'h2':h2,
-    'h3':h3
+    'heuristica1':heuristica1,
+    'heuristica2':heuristica2,
+    'heuristica3':heuristica3
 }
 
 
