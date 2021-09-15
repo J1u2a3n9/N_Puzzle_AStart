@@ -55,6 +55,7 @@ A computer program was designed to solve the n puzzle with the a start algorithm
 
 --> Experiments and results: For 8-puzzle
 
+
   Initial State | Number of states | Time | Steps 
   :---: | :---: | :---: | :---: | :---:
   [6 8 7 1 0 2 3 4 5] | 3770 | 0.07059230 | ['UP', 'LEFT', 'DOWN', 'DOWN', 'RIGHT', 'UP', 'UP', 'RIGHT', 'DOWN', 'DOWN', 'LEFT', 'UP', 'UP', 'LEFT', 'DOWN', 'DOWN', 'RIGHT', 'UP', 'LEFT', 'UP']
