@@ -46,9 +46,12 @@ IMPORTANT!
 ### Cost:
      Cost dependent on the heuristic functions to be applied
   
-  
+## DESCRIPTION OF THE PROBLEM
+Solve the N Puzzle with the A START algorithm with the following heuristics:
 
-
+## Experiments
 1. h1(n) Number of parts out of place with respect to the target condition
 2. h2(n) Sum of the Manhattan distance
 3. h3(n) Sum of inverse permutations
+
+
