@@ -26,7 +26,8 @@ IMPORTANT!
 ### Objective State:
      Puzzle with values equal to that of the target state
  
-![8-Puzzle - copia](https://user-images.githubusercontent.com/74753713/132054536-42d15fd9-cb60-4c35-842d-28dffc1354c5.png)
+![NpuzzleStart](https://user-images.githubusercontent.com/74753713/133523852-fb118808-ca64-429f-b5d1-0a100ef72fa3.png)
+
 
 
 
