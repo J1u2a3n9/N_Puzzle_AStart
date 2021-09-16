@@ -1,7 +1,7 @@
 # THIRD PRACTICE INTELLIGENT SYSTEMS 🚀
 
 ## NAMES 📋
-* Balderrama Mauricio
+* Balderrama Ali Mauricio
 * Canedo Juan Luis
 * La Fuente Mercedes
 
