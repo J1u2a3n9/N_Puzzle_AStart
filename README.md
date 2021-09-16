@@ -152,3 +152,19 @@ A computer program was designed to solve the n puzzle with the a start algorithm
 [1 2 0 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24] | 2 | 0.000048140 | ['LEFT', 'LEFT']
 [1 2 3 4 5 6 0 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24] | 94783 | 15.82658280 | ['RIGHT', 'UP', 'RIGHT', 'RIGHT', 'DOWN', 'LEFT', 'UP', 'LEFT', 'DOWN', 'RIGHT', 'RIGHT', 'UP', 'LEFT', 'LEFT', 'DOWN', 'LEFT', 'LEFT', 'UP', 'RIGHT', 'RIGHT', 'DOWN', 'LEFT', 'UP', 'LEFT', 'DOWN', 'RIGHT', 'RIGHT', 'UP', 'LEFT', 'LEFT']  
 
+#### --> Comparisons
+
+8-puzzle
+
+![8time](https://user-images.githubusercontent.com/65575674/133536231-8bdd0364-dd2b-486a-95a6-e2c855dfd748.png)
+
+15-puzzle
+
+![n=15](https://user-images.githubusercontent.com/65575674/133536270-580b18ea-dc57-4149-a81d-89708cd3d8a0.png)
+
+24-puzzle
+
+![n=24](https://user-images.githubusercontent.com/65575674/133536297-70485073-e67b-4239-8edc-4bc71cdab7a9.png)
+
+
+
