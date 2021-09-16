@@ -25,7 +25,8 @@ Puzzle with random values in the squares
 ### Objective State:
 Puzzle with values equal to that of the target state
  
-![NpuzzleStart](https://user-images.githubusercontent.com/74753713/133523852-fb118808-ca64-429f-b5d1-0a100ef72fa3.png)
+![NpuzzleEnd](https://user-images.githubusercontent.com/74753713/133536453-acac7e4a-96cd-4e1f-b2dd-2576661726f3.png)
+
 
 ### Test of Objective:
 Is the initial puzzle the same as the target puzzle?
@@ -50,7 +51,7 @@ A computer program was designed to solve the n puzzle with the a start algorithm
 ## EXPERIMENTS  📢
 #### 1. H1(n) Number of parts out of place with respect to the target condition
 
-#### --> Experiments and results: For 8-puzzle
+#### :arrow_down: Experiments and results: For 8-puzzle
 
   
   
@@ -64,7 +65,7 @@ A computer program was designed to solve the n puzzle with the a start algorithm
 [7 4 1 8 5 2 6 0 3] | 12797 | 0.25152650 | ['UP', 'UP', 'RIGHT', 'DOWN', 'DOWN', 'LEFT', 'LEFT', 'UP', 'UP', 'RIGHT', 'DOWN', 'DOWN', 'LEFT', 'UP', 'RIGHT', 'RIGHT', 'DOWN', 'LEFT', 'LEFT', 'UP', 'RIGHT', 'UP', 'LEFT']
 
     
-#### --> Experiments and results: For 15-puzzle
+#### :arrow_down: Experiments and results: For 15-puzzle
 
   
   Initial State | Number of states | Time | Steps 
@@ -77,7 +78,7 @@ A computer program was designed to solve the n puzzle with the a start algorithm
 [1 5 2 3 4 6 10 7 0 8 14 11 12 9 13 15] | 8 | 0.00028970 | ['RIGHT', 'DOWN', 'RIGHT', 'UP', 'UP', 'LEFT', 'UP', 'LEFT']
 
 
-#### --> Experiments and results: For 24-puzzle
+#### :arrow_down: Experiments and results: For 24-puzzle
 
   Initial State | Number of states | Time | Steps 
 :---: | :---: | :---: | :---:
@@ -87,7 +88,7 @@ A computer program was designed to solve the n puzzle with the a start algorithm
 
 #### 2. H2(n) Sum of the Manhattan distance
 
-#### --> Experiments and results: For 8-puzzle
+#### :arrow_down: Experiments and results: For 8-puzzle
 
   Initial State | Number of states | Time | Steps 
 :---: | :---: | :---: | :---:
@@ -99,7 +100,7 @@ A computer program was designed to solve the n puzzle with the a start algorithm
 [7 4 1 8 5 2 6 0 3] | 8506 | 1.32256760 | ['UP', 'LEFT', 'UP', 'RIGHT', 'RIGHT', 'DOWN', 'DOWN', 'LEFT', 'UP', 'RIGHT', 'UP', 'LEFT', 'DOWN', 'LEFT', 'UP', 'RIGHT', 'RIGHT', 'DOWN', 'DOWN', 'LEFT', 'UP', 'LEFT', 'UP']
 
 
-#### --> Experiments and results: For 15-puzzle
+#### :arrow_down: Experiments and results: For 15-puzzle
 
   Initial State | Number of states | Time | Steps 
 :---: | :---: | :---: | :---:
@@ -110,7 +111,7 @@ A computer program was designed to solve the n puzzle with the a start algorithm
 [1 2 10 3 6 5 7 0 4 8 14 11 12 9 13 15] | 1012 | 0.16332710 | ['LEFT', 'UP', 'LEFT', 'DOWN', 'LEFT', 'DOWN', 'RIGHT', 'DOWN', 'RIGHT', 'UP', 'UP', 'LEFT', 'UP', 'LEFT']
 [1 5 2 3 4 6 10 7 0 8 14 11 12 9 13 15] | 43 | 0.00735990 |  ['RIGHT', 'DOWN', 'RIGHT', 'UP', 'UP', 'LEFT', 'UP', 'LEFT']
   
-#### --> Experiments and results: For 24-puzzle
+#### :arrow_down: Experiments and results: For 24-puzzle
 
   Initial State | Number of states | Time | Steps 
 :---: | :---: | :---: | :---:
@@ -121,7 +122,7 @@ A computer program was designed to solve the n puzzle with the a start algorithm
 
 #### 3. H3(n) Sum of inverse permutations
     
-#### --> Experiments and results: For 8-puzzle
+#### :arrow_down: Experiments and results: For 8-puzzle
 
   Initial State | Number of states | Time | Steps 
 :---: | :---: | :---: | :---:
@@ -133,7 +134,7 @@ A computer program was designed to solve the n puzzle with the a start algorithm
 [7 4 1 8 5 2 6 0 3] | 2128 | 0.06980460 | ['UP', 'UP', 'RIGHT', 'DOWN', 'DOWN', 'LEFT', 'LEFT', 'UP', 'UP', 'RIGHT', 'DOWN', 'DOWN', 'LEFT', 'UP', 'RIGHT', 'RIGHT', 'DOWN', 'LEFT', 'LEFT', 'UP', 'RIGHT', 'UP', 'LEFT']
 
   
-#### --> Experiments and results: For 15-puzzle
+#### :arrow_down: Experiments and results: For 15-puzzle
 
   Initial State | Number of states | Time | Steps 
 :---: | :---: | :---: | :---:
@@ -145,24 +146,24 @@ A computer program was designed to solve the n puzzle with the a start algorithm
 [1 5 2 3 4 6 10 7 0 8 14 11 12 9 13 15] | 127 | 0.01086230 | ['RIGHT', 'DOWN', 'RIGHT', 'UP', 'UP', 'LEFT', 'UP', 'LEFT']
 
     
-#### --> Experiments and results: For 24-puzzle
+#### :arrow_down: Experiments and results: For 24-puzzle
 
   Initial State | Number of states | Time | Steps 
 :---: | :---: | :---: | :---:
 [1 2 0 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24] | 2 | 0.000048140 | ['LEFT', 'LEFT']
 [1 2 3 4 5 6 0 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24] | 94783 | 15.82658280 | ['RIGHT', 'UP', 'RIGHT', 'RIGHT', 'DOWN', 'LEFT', 'UP', 'LEFT', 'DOWN', 'RIGHT', 'RIGHT', 'UP', 'LEFT', 'LEFT', 'DOWN', 'LEFT', 'LEFT', 'UP', 'RIGHT', 'RIGHT', 'DOWN', 'LEFT', 'UP', 'LEFT', 'DOWN', 'RIGHT', 'RIGHT', 'UP', 'LEFT', 'LEFT']  
 
-#### --> Comparisons
+#### :arrow_down: Comparisons
 
-8-puzzle
+## 8-puzzle
 
 ![8time](https://user-images.githubusercontent.com/65575674/133536231-8bdd0364-dd2b-486a-95a6-e2c855dfd748.png)
 
-15-puzzle
+#### 15-puzzle
 
 ![n=15](https://user-images.githubusercontent.com/65575674/133536270-580b18ea-dc57-4149-a81d-89708cd3d8a0.png)
 
-24-puzzle
+#### 24-puzzle
 
 ![n=24](https://user-images.githubusercontent.com/65575674/133536297-70485073-e67b-4239-8edc-4bc71cdab7a9.png)
 
