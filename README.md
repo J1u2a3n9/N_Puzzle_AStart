@@ -158,7 +158,7 @@ A computer program was designed to solve the n puzzle with the a start algorithm
 
 #### :arrow_down: Comparisons
 
-## 8-puzzle
+## 8-PUZZLE
 
 With 8-puzzle the maximum number of expanded states (11964 states) was obtained with heuristic 1 and the minimum number of expanded states (1010 states) was obtained with heuristic 3. 
 
