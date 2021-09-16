@@ -159,11 +159,11 @@ A computer program was designed to solve the n puzzle with the a start algorithm
 
 ![8time](https://user-images.githubusercontent.com/65575674/133536231-8bdd0364-dd2b-486a-95a6-e2c855dfd748.png)
 
-#### 15-puzzle
+### 15-puzzle
 
 ![n=15](https://user-images.githubusercontent.com/65575674/133536270-580b18ea-dc57-4149-a81d-89708cd3d8a0.png)
 
-#### 24-puzzle
+### 24-puzzle
 
 ![n=24](https://user-images.githubusercontent.com/65575674/133536297-70485073-e67b-4239-8edc-4bc71cdab7a9.png)
 
