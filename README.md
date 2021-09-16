@@ -7,8 +7,9 @@
 
 ## IMPORTANT! HOW TO USE 🔧
 * After cloning the repository enter the folder, open a git bash and put the following command: git checkout master, with           this command you will be able to see all the files 
-* For the correct functioning of the code you first need to install "numpy" from the console with the following command:                    -pip install numpy  
-* Insert the command 'python n_puzzle.py' to start de program.
+* For the correct functioning of the code you first need to install "numpy" from the console with the following command:                   
+             -pip install numpy  
+* Insert the command 'python n_puzzle.py' to start the program.
 * The program allows to read at most and at least two rows of text in which is first the initial state and the target.
 * Each time the execution of the A start algorithm is performed, the global values are initialized to the default values, so it    will be necessary to read the data again.
 
@@ -22,13 +23,13 @@ The first square of the puzzle must start with the number zero and the other squ
 
 ### Initial State:
 Puzzle with random values in the squares 
-      
-![NpuzzleStart](https://user-images.githubusercontent.com/74753713/133524075-1d7cff6a-6272-4ac3-8301-6cac0420cc00.png)
+  
+![NpuzzleEnd](https://user-images.githubusercontent.com/74753713/133536453-acac7e4a-96cd-4e1f-b2dd-2576661726f3.png)
 
 ### Objective State:
 Puzzle with values equal to that of the target state
  
-![NpuzzleEnd](https://user-images.githubusercontent.com/74753713/133536453-acac7e4a-96cd-4e1f-b2dd-2576661726f3.png)
+![NpuzzleStart](https://user-images.githubusercontent.com/74753713/133524075-1d7cff6a-6272-4ac3-8301-6cac0420cc00.png)
 
 
 ### Test of Objective:
