@@ -1,18 +1,16 @@
 # THIRD PRACTICE INTELLIGENT SYSTEMS 🚀
 
-### NAMES 📋
-Balderrama Mauricio
+## NAMES 📋
+* Balderrama Mauricio
+* Canedo Juan Luis
+* La Fuente Mercedes
 
-Canedo Juan Luis
-
-La Fuente Mercedes
-
-### IMPORTANT! How to use 🔧
+## IMPORTANT! HOW TO USE 🔧
 * After cloning the repository enter the folder, open a git bash and put the following command: git checkout master, with           this command you will be able to see all the files 
 * For the correct functioning of the code you first need to install "numpy" from the console with the following command:                    -pip install numpy  
 
 
-### PROBLEM SOLVER AGENT ⚙️
+## PROBLEM SOLVER AGENT ⚙️
 
 ### Objective Formulation:
 The first square of the puzzle must start with the number zero and the other squares with the following consecutive numbers 
@@ -50,9 +48,9 @@ Solve the N Puzzle with the A START algorithm with the following heuristics:
 A computer program was designed to solve the n puzzle with the a start algorithm using the respective heuristics seen in the lectures. 
 
 ## EXPERIMENTS  📢
-1. h1(n) Number of parts out of place with respect to the target condition
+#### 1. H1(n) Number of parts out of place with respect to the target condition
 
---> Experiments and results: For 8-puzzle
+#### --> Experiments and results: For 8-puzzle
 
   
   
@@ -66,7 +64,7 @@ A computer program was designed to solve the n puzzle with the a start algorithm
 [7 4 1 8 5 2 6 0 3] | 12797 | 0.25152650 | ['UP', 'UP', 'RIGHT', 'DOWN', 'DOWN', 'LEFT', 'LEFT', 'UP', 'UP', 'RIGHT', 'DOWN', 'DOWN', 'LEFT', 'UP', 'RIGHT', 'RIGHT', 'DOWN', 'LEFT', 'LEFT', 'UP', 'RIGHT', 'UP', 'LEFT']
 
     
---> Experiments and results: For 15-puzzle
+#### --> Experiments and results: For 15-puzzle
 
   
   Initial State | Number of states | Time | Steps 
@@ -79,7 +77,7 @@ A computer program was designed to solve the n puzzle with the a start algorithm
 [1 5 2 3 4 6 10 7 0 8 14 11 12 9 13 15] | 8 | 0.00028970 | ['RIGHT', 'DOWN', 'RIGHT', 'UP', 'UP', 'LEFT', 'UP', 'LEFT']
 
 
---> Experiments and results: For 24-puzzle
+#### --> Experiments and results: For 24-puzzle
 
   Initial State | Number of states | Time | Steps 
 :---: | :---: | :---: | :---:
@@ -87,9 +85,9 @@ A computer program was designed to solve the n puzzle with the a start algorithm
 [1 2 3 4 5 6 0 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24] | 1220849 | 51.66905610 | ['LEFT', 'DOWN', 'RIGHT', 'RIGHT', 'UP', 'UP', 'RIGHT', 'RIGHT', 'DOWN', 'LEFT', 'UP', 'LEFT', 'DOWN', 'RIGHT', 'RIGHT', 'UP', 'LEFT', 'LEFT', 'LEFT', 'DOWN', 'RIGHT', 'DOWN', 'LEFT', 'LEFT', 'UP', 'RIGHT', 'UP', 'LEFT']
 
 
-2. h2(n) Sum of the Manhattan distance
+#### 2. H2(n) Sum of the Manhattan distance
 
---> Experiments and results: For 8-puzzle
+#### --> Experiments and results: For 8-puzzle
 
   Initial State | Number of states | Time | Steps 
 :---: | :---: | :---: | :---:
@@ -101,7 +99,7 @@ A computer program was designed to solve the n puzzle with the a start algorithm
 [7 4 1 8 5 2 6 0 3] | 8506 | 1.32256760 | ['UP', 'LEFT', 'UP', 'RIGHT', 'RIGHT', 'DOWN', 'DOWN', 'LEFT', 'UP', 'RIGHT', 'UP', 'LEFT', 'DOWN', 'LEFT', 'UP', 'RIGHT', 'RIGHT', 'DOWN', 'DOWN', 'LEFT', 'UP', 'LEFT', 'UP']
 
 
---> Experiments and results: For 15-puzzle
+#### --> Experiments and results: For 15-puzzle
 
   Initial State | Number of states | Time | Steps 
 :---: | :---: | :---: | :---:
@@ -112,7 +110,7 @@ A computer program was designed to solve the n puzzle with the a start algorithm
 [1 2 10 3 6 5 7 0 4 8 14 11 12 9 13 15] | 1012 | 0.16332710 | ['LEFT', 'UP', 'LEFT', 'DOWN', 'LEFT', 'DOWN', 'RIGHT', 'DOWN', 'RIGHT', 'UP', 'UP', 'LEFT', 'UP', 'LEFT']
 [1 5 2 3 4 6 10 7 0 8 14 11 12 9 13 15] | 43 | 0.00735990 |  ['RIGHT', 'DOWN', 'RIGHT', 'UP', 'UP', 'LEFT', 'UP', 'LEFT']
   
---> Experiments and results: For 24-puzzle
+#### --> Experiments and results: For 24-puzzle
 
   Initial State | Number of states | Time | Steps 
 :---: | :---: | :---: | :---:
@@ -121,9 +119,9 @@ A computer program was designed to solve the n puzzle with the a start algorithm
 
 
 
-3. h3(n) Sum of inverse permutations
+#### 3. H3(n) Sum of inverse permutations
     
---> Experiments and results: For 8-puzzle
+#### --> Experiments and results: For 8-puzzle
 
   Initial State | Number of states | Time | Steps 
 :---: | :---: | :---: | :---:
@@ -135,7 +133,7 @@ A computer program was designed to solve the n puzzle with the a start algorithm
 [7 4 1 8 5 2 6 0 3] | 2128 | 0.06980460 | ['UP', 'UP', 'RIGHT', 'DOWN', 'DOWN', 'LEFT', 'LEFT', 'UP', 'UP', 'RIGHT', 'DOWN', 'DOWN', 'LEFT', 'UP', 'RIGHT', 'RIGHT', 'DOWN', 'LEFT', 'LEFT', 'UP', 'RIGHT', 'UP', 'LEFT']
 
   
---> Experiments and results: For 15-puzzle
+#### --> Experiments and results: For 15-puzzle
 
   Initial State | Number of states | Time | Steps 
 :---: | :---: | :---: | :---:
@@ -147,27 +145,10 @@ A computer program was designed to solve the n puzzle with the a start algorithm
 [1 5 2 3 4 6 10 7 0 8 14 11 12 9 13 15] | 127 | 0.01086230 | ['RIGHT', 'DOWN', 'RIGHT', 'UP', 'UP', 'LEFT', 'UP', 'LEFT']
 
     
---> Experiments and results: For 24-puzzle
+#### --> Experiments and results: For 24-puzzle
 
   Initial State | Number of states | Time | Steps 
 :---: | :---: | :---: | :---:
 [1 2 0 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24] | 2 | 0.000048140 | ['LEFT', 'LEFT']
 [1 2 3 4 5 6 0 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24] | 94783 | 15.82658280 | ['RIGHT', 'UP', 'RIGHT', 'RIGHT', 'DOWN', 'LEFT', 'UP', 'LEFT', 'DOWN', 'RIGHT', 'RIGHT', 'UP', 'LEFT', 'LEFT', 'DOWN', 'LEFT', 'LEFT', 'UP', 'RIGHT', 'RIGHT', 'DOWN', 'LEFT', 'UP', 'LEFT', 'DOWN', 'RIGHT', 'RIGHT', 'UP', 'LEFT', 'LEFT']  
-
-Comparisons
-
-For 8-puzzle
-
-![8time](https://user-images.githubusercontent.com/65575674/133535235-b0a0eb1e-0ecf-4155-912f-bb3318152043.png)
-
-For 15-puzzle
-
-![n=15](https://user-images.githubusercontent.com/65575674/133535371-81913624-5e7d-4953-a0ef-724726510173.png)
-
-For 24-puzzle
-
-![n=24](https://user-images.githubusercontent.com/65575674/133535531-c720e7e8-ae94-4718-ba05-f5f0e0e53597.png)
-
-
-
 
