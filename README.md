@@ -196,3 +196,8 @@ The time complexity with A* in terms of the worst execution time is the heuristi
 
 Comparing the results of the heuristic functions h1,h2 and h3 we can discard all of them because they have a weakness either in time or in space and this makes A-star not optimal. 
 
+
+## BIBLIOGRAPHY
+Class slides, Code reference: https://github.com/speix/8-puzzle-solver
+
+
