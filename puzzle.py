@@ -181,12 +181,10 @@ def a_start(initial_state,objective_state,num_h):
     global visited_state,objective_node
     explored=set()
     priority_queuee=list()
-    secondary_queuee={}
     heuristic=num_h(initial_state)
     root_node=State(initial_state,None,None,0,0,heuristic)
     start=(heuristic,0,root_node)
     heappush(priority_queuee,start) #inserta en el monticulo
-    secondary_queuee[root_node.map]=start
     while priority_queuee:
         node = heappop(priority_queuee) #Extrae y devuelve el element más pequeño del montón
         explored.add(node[2].map) #agrega a explorados el state actual sin el peso
@@ -207,8 +205,6 @@ def a_start(initial_state,objective_state,num_h):
                 heappush(priority_queuee, start) #inserta en el monticulo
 
                 explored.add(neighbor.map) 
-
-                secondary_queuee[neighbor.map] = start #en su id unico creado mediantes sus data pone sus mismos data
 
                 if neighbor.depth > visited_state:
                     visited_state += 1
