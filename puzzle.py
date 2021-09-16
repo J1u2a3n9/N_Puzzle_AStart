@@ -5,8 +5,8 @@ from math import factorial, sqrt
 from collections import deque
 from state import State
 from random import randint
-from heapq import heappush, heappop,heapify
-import itertools
+from heapq import heappush, heappop
+
 
 empty_state=[0,0,0,0]
 initial_state = list()
