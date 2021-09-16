@@ -200,6 +200,7 @@ Comparing the results of the heuristic functions h1,h2 and h3 we can discard all
 
 
 ## BIBLIOGRAPHY
-Class slides, Code reference: https://github.com/speix/8-puzzle-solver
+* Class slides
+* Code reference: https://github.com/speix/8-puzzle-solver
 
 
