@@ -12,6 +12,7 @@
 * Insert the command 'python n_puzzle.py' to start the program.
 * The program allows to read at most and at least two rows of text in which is first the initial state and the target.
 * Each time the execution of the A start algorithm is performed, the global values are initialized to the default values, so it    will be necessary to read the data again.
+* You do not have to specify the extension of the txt file to read it, just type its name.
 
 
 ## PROBLEM SOLVER AGENT ⚙️
