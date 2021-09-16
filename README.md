@@ -1,7 +1,7 @@
 # THIRD PRACTICE INTELLIGENT SYSTEMS 🚀
 
 ## NAMES 📋
-* Balderrama Ali Mauricio
+* Balderrama Mauricio
 * Canedo Juan Luis
 * La Fuente Mercedes
 
@@ -161,7 +161,8 @@ A computer program was designed to solve the n puzzle with the a start algorithm
 
 ### 15-puzzle
 
-![n=15](https://user-images.githubusercontent.com/65575674/133536270-580b18ea-dc57-4149-a81d-89708cd3d8a0.png)
+![133536270-580b18ea-dc57-4149-a81d-89708cd3d8a0](https://user-images.githubusercontent.com/74753713/133538555-f220664b-c890-42ca-928f-879841ca0985.png)
+
 
 ### 24-puzzle
 
