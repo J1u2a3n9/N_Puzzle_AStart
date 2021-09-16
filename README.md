@@ -189,4 +189,7 @@ And the maximum execution time is performed by h2 with 420.04782418 seconds.
 The memory occupied in the execution of the program with A* depends on the expanded states that vary according to the heuristic selected and also the size of the puzzle.
 Therefore, the heuristic that uses the largest memory is h2: sum of the Manhattan distance from the piece in the initial state to the same piece in the target state because the process has to be performed for all pieces. 
 
-The time complexity with A* in terms of the worst execution time is the heuristic h2 because its Big-Oh is exponential and the heuristic function that finds the fastest solution is h3 because of the times calculated in the tables.  
+The time complexity with A* in terms of the worst execution time is the heuristic h2 because its Big-Oh is exponential and the heuristic function that finds the fastest solution is h3 because of the times calculated in the tables. 
+
+Comparing the results of the heuristic functions h1,h2 and h3 we can discard all of them because they have a weakness either in time or in space and this makes A-star not optimal. 
+
