@@ -35,10 +35,10 @@ Puzzle with values equal to that of the target state
 Is the initial puzzle the same as the target puzzle?
  
 ### Actions:
-      Moven Up
-      Move Down
-      Move Right
-      Move Left
+* Up
+* Down
+* Right
+* Left
 
 
 
