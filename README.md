@@ -8,6 +8,9 @@
 ## IMPORTANT! HOW TO USE 🔧
 * After cloning the repository enter the folder, open a git bash and put the following command: git checkout master, with           this command you will be able to see all the files 
 * For the correct functioning of the code you first need to install "numpy" from the console with the following command:                    -pip install numpy  
+* Insert the command 'python n_puzzle.py' to start de program.
+* The program allows to read at most and at least two rows of text in which is first the initial state and the target.
+* Each time the execution of the A start algorithm is performed, the global values are initialized to the default values, so it    will be necessary to read the data again.
 
 
 ## PROBLEM SOLVER AGENT ⚙️
