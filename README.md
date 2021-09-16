@@ -157,16 +157,25 @@ A computer program was designed to solve the n puzzle with the a start algorithm
 
 ## 8-puzzle
 
+With 8-puzzle the maximum number of expanded states (11964 states) was obtained with heuristic 1 and the minimum number of expanded states (1010 states) was obtained with heuristic 3. 
+
 ![8time](https://user-images.githubusercontent.com/65575674/133536231-8bdd0364-dd2b-486a-95a6-e2c855dfd748.png)
 
-### 15-puzzle
+## 15-puzzle
+
+With 15-puzzle the maximum number of expanded states (39041 states) was obtained with heuristic 2 and the minimum number of expanded states (8 states) was obtained with heuristic 1.
 
 ![133536270-580b18ea-dc57-4149-a81d-89708cd3d8a0](https://user-images.githubusercontent.com/74753713/133538555-f220664b-c890-42ca-928f-879841ca0985.png)
 
 
-### 24-puzzle
+## 24-puzzle
+
+With 24-puzzle the maximum number of expanded states (507896 states) was obtained with heuristic 2 and the minimum number of expanded states (94783 states) was obtained with heuristic 3.
 
 ![n=24](https://user-images.githubusercontent.com/65575674/133536297-70485073-e67b-4239-8edc-4bc71cdab7a9.png)
 
 
+## CONCLUSION
 
+The memory occupied in the execution of the program with A* depends on the expanded states that vary according to the heuristic selected and also the size of the puzzle.
+Therefore, the heuristic that uses the largest memory is h2: sum of the Manhattan distance from the piece in the initial state to the same piece in the target state because the process has to be performed for all pieces. 
