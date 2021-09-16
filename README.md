@@ -159,11 +159,17 @@ A computer program was designed to solve the n puzzle with the a start algorithm
 
 With 8-puzzle the maximum number of expanded states (11964 states) was obtained with heuristic 1 and the minimum number of expanded states (1010 states) was obtained with heuristic 3. 
 
+The heuristic that finds the solution the fastest is h3 because the minimum execution time is 0.0348482590 seconds.
+And the maximum execution time is h2 with 1.3225256760 seconds.
+
 ![8time](https://user-images.githubusercontent.com/65575674/133536231-8bdd0364-dd2b-486a-95a6-e2c855dfd748.png)
 
 ## 15-puzzle
 
 With 15-puzzle the maximum number of expanded states (39041 states) was obtained with heuristic 2 and the minimum number of expanded states (8 states) was obtained with heuristic 1.
+
+The heuristic that finds the solution the fastest is h1 because the minimum execution time is 0.0002870 seconds
+And the maximum execution time is performed by h2 with 5.7048482880 seconds.
 
 ![133536270-580b18ea-dc57-4149-a81d-89708cd3d8a0](https://user-images.githubusercontent.com/74753713/133538555-f220664b-c890-42ca-928f-879841ca0985.png)
 
@@ -172,6 +178,9 @@ With 15-puzzle the maximum number of expanded states (39041 states) was obtained
 
 With 24-puzzle the maximum number of expanded states (507896 states) was obtained with heuristic 2 and the minimum number of expanded states (94783 states) was obtained with heuristic 3.
 
+The heuristic that finds the fastest solution is h3 because the minimum execution time is 0.000048140 seconds.
+And the maximum execution time is performed by h2 with 420.04782418 seconds.
+
 ![n=24](https://user-images.githubusercontent.com/65575674/133536297-70485073-e67b-4239-8edc-4bc71cdab7a9.png)
 
 
@@ -179,3 +188,5 @@ With 24-puzzle the maximum number of expanded states (507896 states) was obtaine
 
 The memory occupied in the execution of the program with A* depends on the expanded states that vary according to the heuristic selected and also the size of the puzzle.
 Therefore, the heuristic that uses the largest memory is h2: sum of the Manhattan distance from the piece in the initial state to the same piece in the target state because the process has to be performed for all pieces. 
+
+The time complexity with A* in terms of the worst execution time is the heuristic h2 because its Big-Oh is exponential and the heuristic function that finds the fastest solution is h3 because of the times calculated in the tables.  
